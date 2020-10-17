@@ -929,10 +929,6 @@ class RESTMethods {
       .then(app => new OAuth2Application(this.client, app));
   }
 
-  setNote(user, note) {
-    return this.rest.makeRequest('put', Endpoints.User(user).note, true, { note }).then(() => user);
-  }
-
   acceptInvite(code) {
     if (code.id) code = code.id;
     return new Promise((resolve, reject) =>

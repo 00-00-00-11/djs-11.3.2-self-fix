@@ -242,16 +242,6 @@ class User {
   }
 
   /**
-   * Sets a note for the user.
-   * <warn>This is only available when using a user account.</warn>
-   * @param {string} note The note to set for the user
-   * @returns {Promise<User>}
-   */
-  setNote(note) {
-    return this.client.rest.methods.setNote(this, note);
-  }
-
-  /**
    * Checks if the user is equal to another. It compares ID, username, discriminator, avatar, and bot flags.
    * It is recommended to compare equality by using `user.id === user2.id` unless you want to compare all properties.
    * @param {User} user User to compare with
