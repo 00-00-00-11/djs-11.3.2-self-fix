@@ -406,7 +406,7 @@ class Client extends EventEmitter {
       permissions = 0;
     }
     return this.fetchApplication().then(application =>
-      `https://discordapp.com/oauth2/authorize?client_id=${application.id}&permissions=${permissions}&scope=bot`
+      `https://discord.com/oauth2/authorize?client_id=${application.id}&permissions=${permissions}&scope=bot`
     );
   }
 
